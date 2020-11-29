@@ -1,9 +1,14 @@
 import React from 'react';
 
+import Sidebar from '../components/Sidebar';
+
 function QuickOps() {
   return (
-    <div>
-      <h1>Hello World</h1>
+    <div className="quickops d-flex justify-content-between">
+      <aside className="quickops-aside flex-fill">
+        <h2>aside</h2>
+      </aside>
+      <Sidebar />
     </div>
   );
 }

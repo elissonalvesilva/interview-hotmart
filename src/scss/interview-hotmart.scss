@@ -8,6 +8,10 @@
 @import "./components/sidemenu";
 @import "./components/container";
 @import "./components/breadcrump";
+@import "./components/sidebar";
+
+//pages
+@import "./pages/quickops";
 
 body {
   background-color: $background-color;
