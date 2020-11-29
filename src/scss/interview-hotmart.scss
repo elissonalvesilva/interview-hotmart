@@ -1,1 +1,9 @@
 @import "~bootstrap/scss/bootstrap";
+
+
+// variables
+@import "./variables";
+
+// layout components
+@import "./components/head";
+@import "./components/sidemenu";

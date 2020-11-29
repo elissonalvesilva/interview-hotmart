@@ -1,12 +1,19 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
+// layout components
+import SideMenu from './layout/SideMenu';
+import Head from './layout/Head';
+
+// pages
 import QuickOps from '../pages/QuickOps';
 
 function App() {
   return (
     <Router>
       <>
+        <SideMenu />
+        <Head />
         <Switch>
           <Route exact path="/" component={QuickOps} />
         </Switch>
