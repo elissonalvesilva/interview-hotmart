@@ -1,0 +1,17 @@
+.breadcrumb-app {
+
+  .breadcrumb {
+    border-radius: 0;
+
+    .breadcrumb-item {
+      a{
+        color: $breadcrumb-color;
+      }
+
+      &.active {
+        color: $breadcrumb-active;
+      }
+    }
+  }
+
+}
