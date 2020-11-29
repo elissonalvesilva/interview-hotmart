@@ -1,0 +1,77 @@
+.header-app {
+  border-radius: 12px;
+  background-image: linear-gradient(to right, #00d7ce 3%, #00c5fc);
+  border: none;
+  position: relative;
+
+  .header-app__edit {
+    i {
+      position: absolute;
+      right: 12px;
+      top: 12px;
+      color: #fff;
+    }
+  }
+
+  .card-title {
+    color: #fff;
+    font-size: 20px;
+    font-stretch: normal;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 1.5;
+  }
+
+  .article__item {
+    .item__label,
+    .item__value {
+      color: #fff;
+    }
+    .item__label {
+      font-weight: 300;
+      line-height: 1.5;
+    }
+    .item__value {
+      font-weight: 600;
+      line-height: 1.71;
+      font-stretch: normal;
+      font-style: normal;
+    }
+  }
+
+  .header-app__aside {
+    &::before {
+      content: '';
+      width: 2px;
+      background-color: #fff;
+      height: 100%;
+      position: absolute;
+    }
+
+    .aside__content {
+      padding-left: 25px;
+      padding-top: 25px;
+    }
+
+    .aside__attribution {
+      margin-bottom: 15px;
+
+      .attribution__label{
+        color: #fff;
+        font-weight: 300;
+      }
+    }
+
+    .aside__cost-center {
+      .cost-center__label,
+      .cost-center__value {
+        color: #fff;
+        display: block;
+      }
+
+      .cost-center__label {
+        font-weight: 300;
+      }
+    }
+  }
+}

@@ -1,12 +1,13 @@
 import React from 'react';
+import classnames from 'classnames';
 
-function Card({ title = '', children = {} }) {
+function Card({ title = '', children = {}, className = '' }) {
   const renderTitle = () => {
-    return title ? <h2>{title}</h2> : null;
+    return title ? <h1 className="card-title">{title}</h1> : null;
   };
 
   return (
-    <div className="card card-app">
+    <div className={classnames('card card-app', className)}>
       {renderTitle()}
       <div className="card-body">{children}</div>
     </div>

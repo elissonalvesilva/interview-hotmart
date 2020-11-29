@@ -1,4 +1,5 @@
 import React from 'react';
+import Header from '../components/Header';
 
 import Sidebar from '../components/Sidebar';
 
@@ -6,7 +7,7 @@ function QuickOps() {
   return (
     <div className="quickops d-flex justify-content-between">
       <aside className="quickops-aside flex-fill">
-        <h2>aside</h2>
+        <Header />
       </aside>
       <Sidebar />
     </div>
