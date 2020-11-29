@@ -1,9 +1,14 @@
-@import "~bootstrap/scss/bootstrap";
-
-
 // variables
 @import "./variables";
+
+@import "~bootstrap/scss/bootstrap";
 
 // layout components
 @import "./components/head";
 @import "./components/sidemenu";
+@import "./components/container";
+@import "./components/breadcrump";
+
+body {
+  background-color: $background-color;
+}
