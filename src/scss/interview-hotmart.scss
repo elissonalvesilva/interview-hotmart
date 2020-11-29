@@ -9,10 +9,13 @@
 @import "./components/container";
 @import "./components/breadcrump";
 @import "./components/sidebar";
+@import "./components/header";
+
 
 //pages
 @import "./pages/quickops";
 
 body {
   background-color: $background-color;
+  font-family: 'Nunito Sans', sans-serif;
 }
