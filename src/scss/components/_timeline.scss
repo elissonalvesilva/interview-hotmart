@@ -3,5 +3,71 @@
 
   .timeline-app__item {
     margin-bottom: 24px;
+
+    .item__icon {
+      background-color: #EFEBF9;
+      border-radius: 50%;
+      color: #C9BCF3;
+      font-size: 20px;
+      margin-bottom: 10px;
+      height: 60px;
+      text-align: center;
+      width: 60px;
+
+      i {
+        position: relative;
+        top: 15px;
+      }
+    }
+
+    .item__label {
+      display: block;
+      color: #d0d3d6;
+      font-size: 16px;
+      text-transform: uppercase;
+    }
+
+    .item__date {
+      color: #545b64;
+    }
+
+    .item__status--pending,
+    .item__status--reproved,
+    .item__status--approved {
+      border-radius: 18px;
+      border: 1px solid #d0d3d6;
+      display: inline-block;
+      font-size: 12px;
+      font-weight: bold;
+      padding: 6px 12px;
+      text-transform: capitalize;
+    }
+
+    .item__status--pending{
+      background-color: #EFF4F7;
+      border-color: #B2B5BC;
+      color: #727272;
+    }
+    .item__status--reproved{
+      border: solid 1px #d6342c;
+      background-color: #fbeaea;
+    }
+    .item__status--approved {
+      border: solid 1px #03a046;
+      background-color: #e6fff0;
+      color: #03a046;
+    }
+
+    .item__evaluation {
+
+    }
+
+    .item__submited-created {
+      .icon__submited-created {
+        position: relative;
+        top: 11px;
+        font-size: 36px;
+      }
+    }
   }
 }
