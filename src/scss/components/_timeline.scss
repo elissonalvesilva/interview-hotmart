@@ -59,7 +59,12 @@
     }
 
     .item__evaluation {
-
+      .evaluation__accordion {
+        .accordion__title {
+          color: #51c1c3;
+          font-size: 14px;
+        }
+      }
     }
 
     .item__submited-created {

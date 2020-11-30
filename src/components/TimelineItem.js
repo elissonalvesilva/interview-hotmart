@@ -14,7 +14,6 @@ function TimelineItem({ item }) {
   };
 
   const EvaluationItem = () => {
-    console.log(Strings.formatStatus(item.status));
     return (
       <div className="row item__evaluation">
         <div className="col-2">
@@ -42,8 +41,8 @@ function TimelineItem({ item }) {
           </span>
         </div>
         <div className="col-2">
-          <Accordion title="Ver aprovações">
-            <p>asdassa</p>
+          <Accordion title="Ver aprovações" className="evaluation__accordion">
+            <p>Aprovação 1</p>
           </Accordion>
         </div>
       </div>
