@@ -3,6 +3,7 @@ import classnames from 'classnames';
 
 import Card from './layout/Card';
 import Strings from '../utils/strings';
+import Accordion from './layout/Accordion';
 
 function TimelineItem({ item }) {
   const classNameStatus = (status) => {
@@ -41,10 +42,9 @@ function TimelineItem({ item }) {
           </span>
         </div>
         <div className="col-2">
-          <label className="item__label">Tipo</label>
-          <p className="item__description">
-            Aprovação da Solicitação {item.author.name}
-          </p>
+          <Accordion title="Ver aprovações">
+            <p>asdassa</p>
+          </Accordion>
         </div>
       </div>
     );

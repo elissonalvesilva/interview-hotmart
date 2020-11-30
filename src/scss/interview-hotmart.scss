@@ -5,12 +5,16 @@
 
 @import "~bootstrap/scss/bootstrap";
 
-// layout components
+//layout components
 @import "./components/head";
 @import "./components/sidemenu";
 @import "./components/container";
 @import "./components/card";
 @import "./components/breadcrump";
+@import "./components/accordion";
+
+
+// components
 @import "./components/sidebar";
 @import "./components/header";
 @import "./components/timeline";
