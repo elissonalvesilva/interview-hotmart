@@ -23,12 +23,18 @@
     .item__label {
       display: block;
       color: #d0d3d6;
-      font-size: 16px;
+      font-size: 12px;
       text-transform: uppercase;
+    }
+
+    .item__description {
+      font-weight: bold;
+      font-size: 20px;
     }
 
     .item__date {
       color: #545b64;
+      font-size: 14px;
     }
 
     .item__status--pending,
@@ -60,6 +66,8 @@
 
     .item__evaluation {
       .evaluation__accordion {
+        float: right;
+
         .accordion__title {
           color: #51c1c3;
           font-size: 14px;
@@ -72,6 +80,34 @@
         position: relative;
         top: 11px;
         font-size: 36px;
+      }
+    }
+
+    .item__expense {
+      .expense__value {
+        margin: 0;
+
+        .value__item {
+          padding: 0;
+          font-weight: bold;
+          font-size: 20px;
+
+          &.value__total {
+            font-weight: normal;
+            font-size: 14px;
+          }
+        }
+      }
+
+      .expense__invoice {
+        font-size: 14px;
+        text-align: right;
+        i {
+          margin-right: 5px;
+        }
+        a {
+          color: #51c1c3;
+        }
       }
     }
   }

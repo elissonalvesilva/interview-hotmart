@@ -37,7 +37,7 @@ function TimelineItem({ item }) {
         <div className="col-3">
           <label className="item__label">Status</label>
           <span className={classnames('', classNameStatus(item.status))}>
-            {Strings.formatStatus(item.status)}
+            {Strings.capitalizeText(item.status)}
           </span>
         </div>
         <div className="col-2">
@@ -114,9 +114,32 @@ function TimelineItem({ item }) {
             </span>
           </div>
         </div>
-        <div className="col-9">
+        <div className="col-4">
           <label className="item__label">Tipo</label>
-          <p className="item__description">{item.expenseTypeCode}</p>
+          <p className="item__description">
+            {Strings.capitalizeText(item.expenseTypeCode)}
+          </p>
+        </div>
+        <div className="col-4">
+          <label className="item__label">Valor</label>
+          <div className="row expense__value">
+            <div className="col-12 value__item">
+              <span className="value__amount-spent">
+                {Strings.formatCurrency(item.amountSpent, item.currencyCode)}
+              </span>
+            </div>
+            <div className="col-12 value__item value__total">
+              <span>Valor da nota: </span>
+              <span className="value__amount-total">
+                {Strings.formatCurrency(item.amountTotal, item.currencyCode)}
+              </span>
+            </div>
+          </div>
+        </div>
+        <div className="col-2 expense__invoice">
+          <a href="/#">
+            <i className="fas fa-receipt" /> Ver nota fiscal
+          </a>
         </div>
       </div>
     );
