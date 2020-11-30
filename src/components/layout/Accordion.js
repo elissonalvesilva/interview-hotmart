@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import classnames from 'classnames';
 
 function Accordion({ title, className = '', children = null }) {
@@ -6,9 +6,9 @@ function Accordion({ title, className = '', children = null }) {
   let activeAccordion = 'accordion--inactive';
   let classNamesAccordion = '';
 
-  const onClick = () => {
+  const onClick = useCallback(() => {
     setOpenAccordion(!openAccordion);
-  };
+  }, [openAccordion]);
 
   if (openAccordion) {
     activeAccordion = 'accordion--active';
