@@ -39,7 +39,7 @@
     }
   }
 
-  .header-app__aside {
+  .header-app__section {
     &::before {
       content: '';
       width: 2px;
@@ -48,12 +48,12 @@
       position: absolute;
     }
 
-    .aside__content {
+    .section__content {
       padding-left: 25px;
       padding-top: 25px;
     }
 
-    .aside__attribution {
+    .section__attribution {
       margin-bottom: 15px;
 
       .attribution__label{
@@ -62,7 +62,7 @@
       }
     }
 
-    .aside__cost-center {
+    .section__cost-center {
       .cost-center__label,
       .cost-center__value {
         color: #fff;

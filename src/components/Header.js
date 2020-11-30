@@ -52,9 +52,9 @@ function Header() {
             <span className="col-9 item__value">Não</span>
           </div>
         </article>
-        <aside className="col-5 header-app__aside">
-          <div className="row aside__content">
-            <Form className="col-12 aside__attribution">
+        <section className="col-5 header-app__section">
+          <div className="row section__content">
+            <Form className="col-12 section__attribution">
               <Form.Group controlId="form.attributionAnalyst">
                 <Form.Label className="attribution__label">
                   Atribuir Analista
@@ -67,14 +67,14 @@ function Header() {
                 </Form.Control>
               </Form.Group>
             </Form>
-            <div className="col-12 aside__cost-center">
+            <div className="col-12 section__cost-center">
               <span className="cost-center__label">Centro de custo</span>
               <span className="cost-center__value">
                 100% - Approval CC Test
               </span>
             </div>
           </div>
-        </aside>
+        </section>
       </div>
     </Card>
   );
