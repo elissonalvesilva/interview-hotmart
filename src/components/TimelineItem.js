@@ -4,11 +4,12 @@ import classnames from 'classnames';
 import Card from './layout/Card';
 import Strings from '../utils/strings';
 import Accordion from './layout/Accordion';
+import constants from '../utils/constants';
 
 function TimelineItem({ item }) {
   const classNameStatus = (status) => {
     if (status) {
-      return `item__status--${String(status).toLocaleLowerCase()}`;
+      return `item__status--${constants.AvailabledStatus[status]}`;
     }
     return 'item__status--reproved';
   };
