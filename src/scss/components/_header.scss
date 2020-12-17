@@ -22,7 +22,7 @@
     line-height: 1.5;
   }
 
-  .article__item {
+  .details__item {
     .item__label,
     .item__value {
       color: #fff;
@@ -51,15 +51,6 @@
     .section__content {
       padding-left: 25px;
       padding-top: 25px;
-    }
-
-    .section__attribution {
-      margin-bottom: 15px;
-
-      .attribution__label{
-        color: #fff;
-        font-weight: 300;
-      }
     }
 
     .section__cost-center {

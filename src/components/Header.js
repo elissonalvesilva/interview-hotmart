@@ -1,5 +1,4 @@
 import React from 'react';
-import { Form } from 'react-bootstrap';
 
 import Card from './layout/Card';
 
@@ -10,69 +9,65 @@ function Header() {
         <a className="header-app__edit" href="/#">
           <i className="fas fa-edit" />
         </a>
-        <article className="col-7 pl-0 header-app__article">
-          <div className="article__item row">
-            <span className="col-3 item__label text-right">Nome</span>
-            <span className="col-9 item__value">Backoffice Team</span>
+        <section className="col-sm pl-0 header-app__details">
+          <div className="details__item row">
+            <span className="col-4 item__label text-right">Nome</span>
+            <span className="col-8 item__value">Backoffice Team</span>
           </div>
-          <div className="article__item row">
-            <span className="col-3 pl-0 item__label text-right">E-mail</span>
-            <span className="col-9 item__value">backoffice@hotmail.com</span>
+          <div className="details__item row">
+            <span className="col-4 pl-0 item__label text-right">E-mail</span>
+            <span className="col-8 item__value">backoffice@hotmail.com</span>
           </div>
-          <div className="article__item row">
-            <span className="col-3 pl-0 item__label text-right">
+          <div className="details__item row">
+            <span className="col-4 pl-0 item__label text-right">
               Justificativa
             </span>
-            <span className="col-9 item__value">1212</span>
+            <span className="col-8 item__value">1212</span>
           </div>
-          <div className="article__item row">
-            <span className="col-3 pl-0 item__label text-right">
+          <div className="details__item row">
+            <span className="col-4 pl-0 item__label text-right">
               Finalidade
             </span>
-            <span className="col-9 item__value">Confraternização</span>
+            <span className="col-8 item__value">Confraternização</span>
           </div>
-          <div className="article__item row">
-            <span className="col-3 pl-0 item__label text-right">Projetos</span>
-            <span className="col-9 item__value">Afiliados Brasil</span>
+          <div className="details__item row">
+            <span className="col-4 pl-0 item__label text-right">Projetos</span>
+            <span className="col-8 item__value">Afiliados Brasil</span>
           </div>
-          <div className="article__item row">
-            <span className="col-3 pl-0 item__label text-right">Data</span>
-            <span className="col-9 item__value">19/06/2020</span>
+          <div className="details__item row">
+            <span className="col-4 pl-0 item__label text-right">Data</span>
+            <span className="col-8 item__value">19/06/2020</span>
           </div>
-          <div className="article__item row">
-            <span className="col-3 pl-0 item__label text-right">
+          <div className="details__item row">
+            <span className="col-4 pl-0 item__label text-right">
               Quantidade
             </span>
-            <span className="col-9 item__value">2</span>
+            <span className="col-8 item__value">2</span>
           </div>
-          <div className="article__item row">
-            <span className="col-3 pl-0 item__label text-right">
+          <div className="details__item row">
+            <span className="col-4 pl-0 item__label text-right">
               Inclui Cafe da manhã
             </span>
-            <span className="col-9 item__value">Não</span>
+            <span className="col-8 item__value">Não</span>
           </div>
-        </article>
-        <section className="col-5 header-app__section">
+        </section>
+        <section className="col-sm header-app__section">
           <div className="row section__content">
-            <Form className="col-12 section__attribution">
-              <Form.Group controlId="form.attributionAnalyst">
-                <Form.Label className="attribution__label">
-                  Atribuir Analista
-                </Form.Label>
-                <Form.Control as="select">
-                  <option value="" disabled>
-                    Atribuir Analista
-                  </option>
-                  <option>Analist 1</option>
-                </Form.Control>
-              </Form.Group>
-            </Form>
             <div className="col-12 section__cost-center">
               <span className="cost-center__label">Centro de custo</span>
               <span className="cost-center__value">
                 100% - Approval CC Test
               </span>
             </div>
+          </div>
+        </section>
+        <section className="col-sm header-app__section">
+          <div className="row section__content">
+            <i className="fas fa-graduation-cap" />
+            <p>
+              Esta solicitação será paga com o Budget de educação /
+              confraternização.
+            </p>
           </div>
         </section>
       </div>
