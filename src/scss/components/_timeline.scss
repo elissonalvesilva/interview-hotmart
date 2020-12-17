@@ -3,6 +3,7 @@
 
   .timeline-app__item {
     margin-bottom: 24px;
+    padding: 24px 48px 12px;
 
     .item__icon {
       background-color: #EFEBF9;
@@ -39,7 +40,8 @@
 
     .item__status--pending,
     .item__status--reproved,
-    .item__status--approved {
+    .item__status--approved,
+    .item__status--open {
       border-radius: 18px;
       border: 1px solid #d0d3d6;
       display: inline-block;
@@ -58,7 +60,8 @@
       border: solid 1px #d6342c;
       background-color: #fbeaea;
     }
-    .item__status--approved {
+    .item__status--approved,
+    .item__status--open {
       border: solid 1px #03a046;
       background-color: #e6fff0;
       color: #03a046;

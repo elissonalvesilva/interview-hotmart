@@ -2,4 +2,205 @@
   background-color: $sidebar-background;
   padding: $sidebar-padding;
   width: $sidebar-width;
+
+  .sidebar-app__status {
+    margin: 0 36px;
+    padding: 12px 0px;
+    text-align: center;
+
+    &.request__status--open,
+    &.request__status--approved,
+    &.request__status--reproved,
+    &.request__status--pending{
+      border-radius: 6px;
+      border: 1px solid transparent;
+
+      .status__label {
+        margin: 0;
+      }
+      .status__value {
+        font-weight: bold;
+        margin: 0;
+      }
+    }
+
+    &.request__status--approved,
+    &.request__status--open {
+      background-color: #edfff5;
+      border-color: #009d43;
+
+      .status__label {
+        color: #006e2f;
+      }
+      .status__value {
+        color: #009d43;
+      }
+    }
+
+    &.request__status--reproved {
+      background-color: #d46c66;
+      border-color: #d6342c;
+
+      .status__label {
+        color: #d6342c;
+      }
+      .status__value {
+        color: #d6342c;
+      }
+    }
+
+    &.request__status--pending {
+      background-color: #EFF4F7;
+      border-color: #727272;
+
+      .status__label {
+        color: #727272;
+      }
+      .status__value {
+        color: #727272;
+      }
+    }
+
+    .status__value {
+      font-size: 24px;
+    }
+  }
+
+  .sidebar-app__details {
+    margin: 32px 0;
+    padding: 0px 36px;
+
+    .details__content {
+      border: 2px solid #f0f3f7;
+      border-radius: 5px;
+      padding-top: 15px;
+
+      .details__balance {
+        text-align: center;
+
+        .details__title {
+          text-transform: uppercase;
+          color: #959A9F;
+          font-size: 14px;
+        }
+
+        .details__balance-value {
+          font-size: 24px;
+          color: #053d4e;
+        }
+
+        .details__divider {
+          text-align: center;
+          width: 200px;
+          margin: 0 auto;
+        }
+
+        .details__spent-received {
+          margin: 32px 0px;
+          padding: 0 20px;
+          position: relative;
+          flex-wrap: nowrap;
+
+          .spent-received__divider{
+            width: 2px;
+            height: 37px;
+            display: inline-block;
+            margin-right: 21px;
+          }
+
+          .received__icon,
+          .spent__icon {
+            position: relative;
+            top: 3px;
+            height: 30px;
+            border: 1px solid #d0d3d6;
+            border-radius: 50%;
+            padding: 2px 8px;
+            margin-right: 12px;
+
+            i {
+              color:  #d0d3d6;
+              font-size: 12px;
+            }
+          }
+
+          .received__content,
+          .spent__content {
+            text-align: justify;
+
+            .spent__label,
+            .received__label {
+              margin: 0;
+              line-height: normal;
+              font-weight: 300;
+              color: #9ea4ac;
+              font-size: 12px;
+            }
+
+            .spent__value,
+            .received__value{
+              line-height: normal;
+              color: #32363b;
+              font-size: 16px;
+            }
+          }
+        }
+      }
+
+      .details__statement {
+        padding: 0 23px;
+        .statement__title {
+          font-size: 14px;
+          font-weight: bold;
+          line-height: 1.5;
+          color: #353a40;
+          padding-bottom: 13px;
+          border-bottom: 1px solid #f0f3f7;
+        }
+
+        .statement__table-value {
+          padding: 20px 0;
+
+          .table-value__title {
+            font-size: 12px;
+            font-weight: normal;
+            line-height: 1.75;
+            color: #053d4e;
+          }
+
+          .table-value__statement-data{
+
+            .statement-data__content{
+
+              .statement-data__type {
+                width: 100%;
+              }
+
+              .statement-data__type,
+              .statement-data__value {
+                padding-top: 12px;
+                font-size: 14px;
+                font-weight: bold;
+                line-height: 1.5;
+                color: #053d4e;
+              }
+
+              .payment-made {
+                color: #4acc82;
+              }
+            }
+
+
+
+            .statement-data__description {
+              font-size: 12px;
+              font-weight: 300;
+            }
+          }
+        }
+      }
+
+
+    }
+  }
 }
