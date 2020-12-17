@@ -22,46 +22,80 @@
     line-height: 1.5;
   }
 
-  .details__item {
-    .item__label,
-    .item__value {
-      color: #fff;
-    }
-    .item__label {
-      font-weight: 300;
-      line-height: 1.5;
-    }
-    .item__value {
-      font-weight: 600;
-      line-height: 1.71;
-      font-stretch: normal;
-      font-style: normal;
-    }
-  }
-
   .header-app__section {
+    position: relative;
+    &:first-of-type {
+      &::before {
+        display: none;
+      }
+    }
+
     &::before {
       content: '';
-      width: 2px;
+      width: 1px;
       background-color: #fff;
-      height: 100%;
+      height: 80%;
       position: absolute;
     }
 
     .section__content {
       padding-left: 25px;
       padding-top: 25px;
+
+      &.section__cost-center {
+        text-align: center;
+
+        .cost-center__details{
+          display: inline-block;
+
+          .cost-center__label,
+          .cost-center__value {
+            margin: 0 auto;
+            color: #fff;
+            display: block;
+            text-align: justify;
+          }
+
+          .cost-center__value {
+            font-size: 16px;
+          }
+
+          .cost-center__label {
+            font-size: 14px;
+            font-weight: 300;
+            margin-bottom: 6px;
+          }
+        }
+
+      }
     }
 
-    .section__cost-center {
-      .cost-center__label,
-      .cost-center__value {
+    .details__item {
+      .item__label,
+      .item__value {
         color: #fff;
-        display: block;
       }
-
-      .cost-center__label {
+      .item__label {
         font-weight: 300;
+        line-height: 1.5;
+      }
+      .item__value {
+        font-weight: 600;
+        line-height: 1.71;
+        font-stretch: normal;
+        font-style: normal;
+      }
+    }
+
+    .education-budget__section {
+      text-align: center;
+      .education-budget__details {
+        color: #fff;
+        display: inline-block
+
+        i {
+          margin: 0 auto;
+        }
       }
     }
   }
