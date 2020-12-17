@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Conditional from './layout/Conditional';
 
 function Expense() {
   const [shownExpeseForm, setShowExpenseForm] = useState(false);
@@ -15,7 +16,7 @@ function Expense() {
           Adicionar despensas
         </button>
       </div>
-      {shownExpeseForm && (
+      <Conditional condition={shownExpeseForm}>
         <div className="expense__container">
           <div className="row expense__content">
             <h2>Nova despesa</h2>
@@ -94,7 +95,7 @@ function Expense() {
             </div>
           </div>
         </div>
-      )}
+      </Conditional>
     </div>
   );
 }
