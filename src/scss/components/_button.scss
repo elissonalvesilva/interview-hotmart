@@ -1,0 +1,30 @@
+.button {
+  background-color: transparent;
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-weight: 300;
+  line-height: 1.5;
+  color: #6b7480;
+
+  &.cancel {
+    background-color: #fff;
+    border: 1px solid #6b7480;
+  }
+
+  &.submit {
+    background-color: #51c1c3;
+    border: none;
+    color: #fff;
+  }
+
+  &.success {
+    background-color: #009d43;
+    border: none;
+    color: #fff;
+  }
+
+  &.error {
+    background-color: #d6342c;
+    border: 1px solid #fff;
+  }
+}
