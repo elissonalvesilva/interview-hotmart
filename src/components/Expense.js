@@ -6,7 +6,7 @@ import Conditional from './layout/Conditional';
 
 function Expense() {
   // trocar antes de commitar
-  const [shownExpeseForm, setShowExpenseForm] = useState(true);
+  const [shownExpeseForm, setShowExpenseForm] = useState(false);
 
   const showForm = () => {
     setShowExpenseForm(true);
