@@ -9,6 +9,7 @@ import Breadcrumb from './layout/Breadcrump';
 
 // pages
 import QuickOps from '../pages/QuickOps';
+import ServiceUnavailabled from '../pages/ServiceUnavailabled';
 
 function App() {
   return (
@@ -20,17 +21,13 @@ function App() {
           <Breadcrumb />
           <Switch>
             <Route exact path="/" component={QuickOps} />
+            <Route
+              exact
+              path="/service-unavailabled"
+              component={ServiceUnavailabled}
+            />
           </Switch>
         </Container>
-        {/* <AppSidebar />
-        <Container>
-          <AppPageHeader />
-            <PrivateRoute exact path="/" component={Home} />
-            <PrivateRoute exact path="/store-config" component={StoreConfig} />
-            <PrivateRoute exact path="/store-config/help" component={Help} />
-          </Switch>
-        </Container>
-        <AppLoading /> */}
       </>
     </Router>
   );
