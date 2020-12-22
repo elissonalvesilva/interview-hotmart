@@ -9,7 +9,7 @@ function Expense() {
   const [shownExpeseForm, setShowExpenseForm] = useState(false);
 
   const showForm = () => {
-    setShowExpenseForm(true);
+    setShowExpenseForm(!shownExpeseForm);
   };
 
   return (
