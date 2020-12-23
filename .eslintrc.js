@@ -34,5 +34,6 @@ module.exports = {
     'no-console': 'off',
     'no-undef': 'off',
     'jsx-a11y/label-has-associated-control': 'off',
+    'import/no-extraneous-dependencies': 'off',
   },
 };
