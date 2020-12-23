@@ -21,7 +21,7 @@ function Input({ name, ...rest }) {
         className={error ? 'has-error' : ''}
         {...rest}
       />
-      {/* {error && <span className="error">{error}</span>} */}
+      {error && <small className="input-error">{error}</small>}
     </>
   );
 }

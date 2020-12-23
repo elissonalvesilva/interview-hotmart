@@ -140,7 +140,7 @@ function Expense() {
                           <i className="far fa-calendar" />
                         </span>
                         <Input
-                          type="text"
+                          type="date"
                           name="cardDate"
                           className="form-control"
                           placeholder="00/00/00"
@@ -152,7 +152,7 @@ function Expense() {
                         Valor da nota / cupom*
                       </label>
                       <Input
-                        type="text"
+                        type="number"
                         name="amountTotal"
                         className="form-control"
                         id="amountTotal"
@@ -165,7 +165,7 @@ function Expense() {
                       <Input
                         name="amountSpent"
                         className="form-control"
-                        type="text"
+                        type="number"
                         id="amountSpent"
                       />
                     </div>

@@ -33,7 +33,7 @@ function Select({ name, options = [], ...rest }) {
           );
         })}
       </select>
-      {error && <span className="error">{error}</span>}
+      {error && <small className="input-error">{error}</small>}
     </>
   );
 }

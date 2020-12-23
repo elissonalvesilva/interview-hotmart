@@ -16,7 +16,7 @@ function InputFile({ name, ...rest }) {
   return (
     <>
       <input type="file" ref={inputRef} {...rest} />
-      {error && <span className="error">{error}</span>}
+      {error && <small className="input-error">{error}</small>}
     </>
   );
 }
