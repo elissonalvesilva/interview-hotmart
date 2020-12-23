@@ -1,9 +1,9 @@
-.PHONY: build start stop remove logs lint mocha test run release
+.PHONY: install start test test-watch build release
 
 SHELL := /bin/bash
 branch := $(shell git branch | grep \* | cut -d ' ' -f2)
 
-build:
+install:
 	rm -rf ./node_modules
 	yarn
 
@@ -15,6 +15,9 @@ test-watch:
 
 test:
 	yarn test
+
+build:
+	yarn build
 
 ## Version management
 release:

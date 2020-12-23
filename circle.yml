@@ -8,7 +8,7 @@ jobs:
       - type: shell
         name: Setup Project hotmart
         command: |
-          make build
+          make install
       - type: shell
         name: Test Project hotmart code
         command: |
