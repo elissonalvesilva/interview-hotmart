@@ -1,26 +1,22 @@
-import React, { useEffect } from 'react';
-import axios from 'axios';
+import React from 'react';
 
 import Header from '../components/Header';
 import Sidebar from '../components/Sidebar';
 import Expense from '../components/Expense';
 import Timeline from '../components/Timeline';
 
-function QuickOps({ history }) {
-  // useEffect(() => {
-  //   const checkService = async () => {
-  //     const { status } = await axios.get(
-  //       'https://api-front-end-challenge.buildstaging.com/api/status'
-  //     );
+import ServiceUnavailabled from './ServiceUnavailabled';
 
-  //     if (status) {
-  //       history.push('service-unavailabled');
-  //     }
-  //   };
-  //   checkService();
+import useFetch from '../hooks/useFetchData';
 
-  //   return () => null;
-  // });
+function QuickOps() {
+  const { status } = useFetch(
+    'https://api-front-end-challenge.buildstaging.com/api/statuss'
+  );
+
+  if (!status) {
+    return <ServiceUnavailabled />;
+  }
 
   return (
     <div className="quickops d-flex justify-content-between">
