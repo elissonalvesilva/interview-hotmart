@@ -1,5 +1,5 @@
 {
   "*.js": [
-    "eslint 'src/**' --fix"
+    "eslint 'src/**(.js|jsx)' --fix"
   ]
 }
