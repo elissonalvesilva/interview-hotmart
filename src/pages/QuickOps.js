@@ -10,11 +10,12 @@ import ServiceUnavailabled from './ServiceUnavailabled';
 import useFetch from '../hooks/useFetchData';
 
 function QuickOps() {
-  const { status } = useFetch(
+  const { responseStatus } = useFetch(
     'https://api-front-end-challenge.buildstaging.com/api/status'
   );
 
-  if (!status) {
+  console.log(responseStatus);
+  if (responseStatus > 400) {
     return <ServiceUnavailabled />;
   }
 
