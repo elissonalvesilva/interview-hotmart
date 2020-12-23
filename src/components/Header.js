@@ -35,6 +35,10 @@ function Header() {
     talentPartnerData = `${percentage}% - ${talentPartner?.name}`;
   }
 
+  if (!status) {
+    return <Loading className="header-loading" />;
+  }
+
   return (
     <Card className="header-app" title="Reembolso - Confraternização">
       <div className="row">

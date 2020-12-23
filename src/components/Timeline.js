@@ -1,28 +1,22 @@
-import axios from 'axios';
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+
 import TimelineItem from './TimelineItem';
 
+import useFetch from '../hooks/useFetchData';
+import Loading from './layout/Loading';
+
 function Timeline() {
-  const [timelineItems, setItems] = useState([]);
+  const { status, response } = useFetch(
+    'https://api-front-end-challenge.buildstaging.com/api/timeline'
+  );
 
-  useEffect(() => {
-    const getData = async () => {
-      const { data } = await axios.get(
-        'https://api-front-end-challenge.buildstaging.com/api/timeline'
-      );
-
-      if (data) {
-        const { content } = data;
-        setItems([...content]);
-      }
-    };
-
-    getData();
-  }, []);
+  if (!status) {
+    return <Loading className="timeline-loading" />;
+  }
 
   return (
     <div className="timeline-app row">
-      {timelineItems.map((item) => (
+      {response?.content?.map((item) => (
         <TimelineItem key={item.id} item={item} />
       ))}
     </div>

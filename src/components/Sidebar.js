@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
 import Conditional from './layout/Conditional';
+import Loading from './layout/Loading';
 import SidebarItem from './SidebarItem';
 
 import constants from '../utils/constants';
@@ -29,6 +30,10 @@ function Sidebar() {
     }
     return 'request__status--reproved';
   };
+
+  if (!status) {
+    return <Loading className="sidebar-loading" />;
+  }
 
   return (
     <div className="sidebar-app align-self-stretch">
