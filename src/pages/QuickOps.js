@@ -11,7 +11,7 @@ import useFetch from '../hooks/useFetchData';
 
 function QuickOps() {
   const { status } = useFetch(
-    'https://api-front-end-challenge.buildstaging.com/api/statuss'
+    'https://api-front-end-challenge.buildstaging.com/api/status'
   );
 
   if (!status) {
