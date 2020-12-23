@@ -64,7 +64,7 @@ function Expense() {
           <div className="expense__content">
             <Form onSubmit={handleSubmit} ref={formRef}>
               <div className="row form__data">
-                <div className="col-6 expense__upload">
+                <div className="col-12 col-sm-12 col-md-6 expense__upload">
                   <span className="upload__label-title">
                     Recibo, cupom ou nota fiscal*
                   </span>
@@ -84,7 +84,7 @@ function Expense() {
                     A imagem deve estar no formato JPG ou PNG.
                   </small>
                 </div>
-                <div className="col-5 expense__data">
+                <div className="col-12 col-sm-12 col-md-5 expense__data">
                   <div className="row m-0">
                     <div className="col-6 p-0">
                       <label htmlFor="expenseTypeCode" className="form-label">

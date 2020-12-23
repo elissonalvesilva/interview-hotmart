@@ -4,3 +4,26 @@
   position: fixed;
   width: $sidemenu-width;
 }
+
+@include media-breakpoint-only(xs) {
+  .sidemenu-app {
+    width: $sidemenu-width - 180px;
+  }
+}
+@include media-breakpoint-only(sm) {
+  .sidemenu-app {
+    width: $sidemenu-width - 160px;
+  }
+}
+
+@include media-breakpoint-only(md) {
+  .sidemenu-app {
+    width: $sidemenu-width - 160px;
+  }
+}
+
+@include media-breakpoint-only(lg) {
+  .sidemenu-app {
+    width: $sidemenu-width - 160px;
+  }
+}

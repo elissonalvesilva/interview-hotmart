@@ -45,7 +45,7 @@ function Header() {
         <a className="header-app__edit" href="/#">
           <i className="fas fa-edit" />
         </a>
-        <section className="col-sm pl-0 header-app__section">
+        <section className="col-12 col-sm-12 col-md-5 pl-0 header-app__section">
           <div className="section__content">
             <div className="details__item row">
               <span className="col-4 item__label text-right">Nome</span>
@@ -99,7 +99,7 @@ function Header() {
             </div>
           </div>
         </section>
-        <section className="col-sm header-app__section">
+        <section className="col-12 col-sm-12 col-md-5 header-app__section">
           <div className="col-sm section__content section__cost-center">
             <div className="cost-center__details">
               <span className="cost-center__label">Centro de custo</span>
@@ -118,7 +118,7 @@ function Header() {
           </div>
         </section>
         <Conditional condition={response.fraternizationEducationBudget}>
-          <section className="col-sm header-app__section">
+          <section className="col-12 col-sm-12 col-md-2 header-app__section">
             <div className="row section__content education-budget__section">
               <div className="education-budget__details">
                 <i className="fas fa-graduation-cap" />

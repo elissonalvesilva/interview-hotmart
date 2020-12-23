@@ -121,3 +121,19 @@
   border-radius: 6px;
   padding: 25px;
 }
+
+@include media-breakpoint-only(xs) {
+  .timeline-app {
+    .timeline-app__item {
+      padding: 12px 16px 12px;
+    }
+  }
+}
+
+@include media-breakpoint-only(sm) {
+  .timeline-app {
+    .timeline-app__item {
+      padding: 16px 32px 12px;
+    }
+  }
+}

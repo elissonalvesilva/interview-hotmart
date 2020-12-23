@@ -4,3 +4,30 @@
   height: $head-height;
   margin-left: $sidemenu-width;
 }
+
+@include media-breakpoint-only(xs) {
+  .head-app {
+    margin-left: $sidemenu-width - 180px;
+    width: 100%;
+  }
+}
+@include media-breakpoint-only(sm) {
+  .head-app {
+    margin-left: $sidemenu-width - 160px;
+    width: 100%;
+  }
+}
+
+@include media-breakpoint-only(md) {
+  .head-app {
+    margin-left: $sidemenu-width - 160px;
+    width: 100%;
+  }
+}
+
+@include media-breakpoint-only(lg) {
+  .head-app {
+    margin-left: $sidemenu-width - 160px;
+    width: 100%;
+  }
+}

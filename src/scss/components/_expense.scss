@@ -122,3 +122,34 @@
 
   }
 }
+
+@include media-breakpoint-only(xs) {
+  .expense-app {
+
+    .expense__container {
+      .expense__content {
+        .form__data {
+          padding: 0 20px;
+          .expense__upload {
+            padding: 20px;
+            margin-bottom: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+@include media-breakpoint-only(sm) {
+  .expense-app {
+
+    .expense__container {
+      .expense__content {
+        .form__data {
+          .expense__upload {
+            margin-bottom: 20px;
+          }
+        }
+      }
+    }
+  }
+}

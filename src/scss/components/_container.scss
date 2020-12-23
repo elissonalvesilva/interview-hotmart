@@ -5,3 +5,52 @@
     max-width: calc(100% - 220px);
   }
 }
+
+@include media-breakpoint-only(xs) {
+  .container-app {
+    &.wrapper {
+      float: none;
+      padding-right: 25px;
+      margin-left: 40px;
+      margin-right: 0;
+      max-width: 100%;
+    }
+  }
+}
+
+@include media-breakpoint-only(sm) {
+  .container-app {
+    &.wrapper {
+      float: none;
+      padding-right: 25px;
+      margin-left: 60px;
+      margin-right: 0;
+      max-width: 100%;
+    }
+  }
+}
+
+@include media-breakpoint-only(md) {
+  .container-app {
+    &.wrapper {
+      float: none;
+      padding-right: 25px;
+      margin-left: 60px;
+      margin-right: 0;
+      max-width: 100%;
+    }
+  }
+}
+
+@include media-breakpoint-only(lg) {
+  .container-app {
+    &.wrapper {
+      float: none;
+      padding-right: 25px;
+      margin-left: 60px;
+      margin-right: 0;
+      max-width: 100%;
+    }
+  }
+}
+

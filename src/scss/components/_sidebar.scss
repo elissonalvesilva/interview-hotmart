@@ -210,3 +210,22 @@
   background-color: $sidebar-background;
   width: $sidebar-width;
 }
+
+@include media-breakpoint-only(xs) {
+  .sidebar-app {
+    width: 100%;
+  }
+
+}
+@include media-breakpoint-only(sm) {
+  .sidebar-app {
+    width: 100%;
+  }
+}
+
+@include media-breakpoint-only(md) {
+  .sidebar-app {
+    width: 100%;
+  }
+}
+
