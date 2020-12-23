@@ -1,16 +1,55 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
+import { Form } from '@unform/web';
+import * as Yup from 'yup';
+
 import Button from './layout/Button';
 import Card from './layout/Card';
-
 import Conditional from './layout/Conditional';
+import Input from './layout/Input';
+import InputFile from './layout/InputFile';
+import Select from './layout/Select';
+
+import usePost from '../hooks/usePost';
+
+import Schema from '../models/expense';
 
 function Expense() {
+  const formRef = useRef(null);
+  const { send } = usePost(
+    'https://api-front-end-challenge.buildstaging.com/api/expense/add'
+  );
   // trocar antes de commitar
   const [shownExpeseForm, setShowExpenseForm] = useState(false);
 
   const showForm = () => {
     setShowExpenseForm(!shownExpeseForm);
   };
+
+  async function handleSubmit(data) {
+    try {
+      formRef.current.setErrors({});
+      const schema = Schema;
+      await schema.validate(data, {
+        abortEarly: false,
+      });
+
+      const result = await send(data);
+
+      if (result) {
+        console.log('success');
+        window.location.reload();
+      }
+    } catch (err) {
+      const validationErrors = {};
+      if (err instanceof Yup.ValidationError) {
+        err.inner.forEach((error) => {
+          console.log(error);
+          validationErrors[error.path] = error.message;
+        });
+        formRef.current.setErrors(validationErrors);
+      }
+    }
+  }
 
   return (
     <div className="expense-app">
@@ -23,7 +62,7 @@ function Expense() {
       <Conditional condition={shownExpeseForm}>
         <Card className="expense__container" title="Nova despesa">
           <div className="expense__content">
-            <form>
+            <Form onSubmit={handleSubmit} ref={formRef}>
               <div className="row form__data">
                 <div className="col-6 expense__upload">
                   <span className="upload__label-title">
@@ -34,8 +73,9 @@ function Expense() {
                     <label htmlFor="formFile" className="upload__label">
                       Selecione um arquivo do seu computador
                     </label>
-                    <input
+                    <InputFile
                       type="file"
+                      name="resourceUrl"
                       className="form-control upload__input-file"
                       id="formFile"
                     />
@@ -47,40 +87,45 @@ function Expense() {
                 <div className="col-5 expense__data">
                   <div className="row m-0">
                     <div className="col-6 p-0">
-                      <label htmlFor="selectType" className="form-label">
+                      <label htmlFor="expenseTypeCode" className="form-label">
                         Tipo*
                       </label>
-                      <select
+                      <Select
+                        name="expenseTypeCode"
                         className="form-select form-control"
-                        id="selectType"
+                        id="expenseTypeCode"
                         aria-label="Default select example"
-                      >
-                        <option defaultValue>Selecione</option>
-                        <option value="hotel-fee">Hotel Fee</option>
-                        <option value="food">Food</option>
-                        <option value="transport">Transport</option>
-                      </select>
+                        options={[
+                          { defaultValue: true, label: 'Selecione' },
+                          { value: 'hotel-fee', label: 'Hotel Fee' },
+                          { value: 'food', label: 'Food' },
+                          { value: 'transport', label: 'Transport' },
+                        ]}
+                      />
                     </div>
                     <div className="col-6 pr-0 mb-3">
-                      <label htmlFor="selectType" className="form-label">
+                      <label htmlFor="selectCurrency" className="form-label">
                         Moeda*
                       </label>
-                      <select
+                      <Select
+                        name="currencyCode"
                         className="form-select form-control"
-                        id="selectType"
+                        id="selectCurrency"
                         aria-label="select currency"
-                      >
-                        <option defaultValue>Selecione</option>
-                        <option value="BRL">BRL</option>
-                        <option value="USD">USD</option>
-                        <option value="MXN">MXN</option>
-                      </select>
+                        options={[
+                          { defaultValue: true, label: 'Selecione' },
+                          { value: 'BRL', label: 'BRL' },
+                          { value: 'USD', label: 'USD' },
+                          { value: 'MXN', label: 'MXN' },
+                        ]}
+                      />
                     </div>
                     <div className="col-12 p-0 mb-3">
                       <label htmlFor="expenseTitle" className="form-label">
                         Titulo da despesa*
                       </label>
-                      <input
+                      <Input
+                        name="notes"
                         className="form-control"
                         type="text"
                         id="expenseTitle"
@@ -94,33 +139,34 @@ function Expense() {
                         <span className="input-group-text" id="basic-addon1">
                           <i className="far fa-calendar" />
                         </span>
-                        <input
+                        <Input
                           type="text"
+                          name="cardDate"
                           className="form-control"
-                          placeholder="Username"
-                          aria-label="Username"
-                          aria-describedby="basic-addon1"
+                          placeholder="00/00/00"
                         />
                       </div>
                     </div>
                     <div className="col-6 pl-0 mb-3">
-                      <label htmlFor="expenseTitle" className="form-label">
+                      <label htmlFor="amountTotal" className="form-label">
                         Valor da nota / cupom*
                       </label>
-                      <input
-                        className="form-control"
+                      <Input
                         type="text"
-                        id="expenseTitle"
+                        name="amountTotal"
+                        className="form-control"
+                        id="amountTotal"
                       />
                     </div>
                     <div className="col-6 pr-0 mb-3">
-                      <label htmlFor="expenseTitle" className="form-label">
+                      <label htmlFor="amountSpent" className="form-label">
                         Valor a ser considerado*
                       </label>
-                      <input
+                      <Input
+                        name="amountSpent"
                         className="form-control"
                         type="text"
-                        id="expenseTitle"
+                        id="amountSpent"
                       />
                     </div>
                   </div>
@@ -134,7 +180,7 @@ function Expense() {
                   Submit
                 </Button>
               </div>
-            </form>
+            </Form>
           </div>
         </Card>
       </Conditional>
