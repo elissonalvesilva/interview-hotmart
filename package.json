@@ -7,7 +7,9 @@
     "start": "webpack-dev-server --open --mode development",
     "build": "webpack --mode=production",
     "test": "jest --config ./jest.config.js",
-    "test:watch": "yarn test --watch"
+    "test:watch": "yarn test --watch",
+    "test:ci": "yarn test -- --coverage",
+    "release": "yarn test -- && standard-version"
   },
   "keywords": [],
   "author": "elisson.silva <nossilesilva@gmail.com>",
@@ -52,6 +54,7 @@
     "prettier": "^2.2.1",
     "react-test-renderer": "^17.0.1",
     "sass-loader": "^10.1.0",
+    "standard-version": "^9.0.0",
     "style-loader": "^2.0.0",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10",

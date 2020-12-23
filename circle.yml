@@ -1,0 +1,15 @@
+version: 2
+executorType: machine
+jobs:
+  build:
+    workDir: ~/src
+    steps:
+      - type: checkout
+      - type: shell
+        name: Setup Project hotmart
+        command: |
+          make build
+      - type: shell
+        name: Test Project hotmart code
+        command: |
+          make test
