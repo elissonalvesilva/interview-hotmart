@@ -14,7 +14,6 @@ function QuickOps() {
     'https://api-front-end-challenge.buildstaging.com/api/status'
   );
 
-  console.log(responseStatus);
   if (responseStatus > 400) {
     return <ServiceUnavailabled />;
   }
