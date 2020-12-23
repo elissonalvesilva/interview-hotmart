@@ -5,20 +5,26 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import SideMenu from './layout/SideMenu';
 import Head from './layout/Head';
 import Container from './layout/Container';
-import Breadcrumb from './layout/Breadcrump';
+import Breadcrumb from './layout/Breadcrumb';
 
 // pages
 import QuickOps from '../pages/QuickOps';
 import ServiceUnavailabled from '../pages/ServiceUnavailabled';
 
 function App() {
+  const breadcrumbItems = [
+    { href: '/', label: 'Dashboard' },
+    { href: '/', label: 'QuickOps' },
+    { href: '/', label: 'current', active: true },
+  ];
+
   return (
     <Router>
       <>
         <SideMenu />
         <Head />
         <Container>
-          <Breadcrumb />
+          <Breadcrumb items={breadcrumbItems} />
           <Switch>
             <Route exact path="/" component={QuickOps} />
             <Route
