@@ -136,7 +136,7 @@ function Expense() {
                         Data do comprovante*
                       </label>
                       <div className="input-group ">
-                        <span className="input-group-text" id="basic-addon1">
+                        <span className="input-group-text">
                           <i className="far fa-calendar" />
                         </span>
                         <Input
